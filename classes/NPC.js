@@ -1,3 +1,4 @@
+
 class NPC {
     constructor({ x, y, size, velocity = { x: 0, y: 0 }, imageSrcNPC, NPCsprites, FirstDirectionNPC, SecondDirectionNPC, ThirdDirectionNPC, FourthDirectionNPC, MovementLeftTimer, MovementRightTimer, MovementUpTimer, MovementDownTimer, FirstTimerNPCMovement, SecondTimerNPCMovement, ThirdTimerNPCMovement, FourthTimerNPCMovement, FifthTimerNPCMovement, TalkBubble}) {
       this.x = x
@@ -50,7 +51,6 @@ class NPC {
       this.FourthDirection = FourthDirectionNPC
       this.TalkBubble = TalkBubble
     }
-
   
     draw(c) {
       //if this.loaded = false return en doe nog niks

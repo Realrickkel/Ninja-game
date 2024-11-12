@@ -3,18 +3,22 @@ window.addEventListener('keydown', (event) => {
     case 'w':
       keys.w.pressed = true
       isTalking = false
+      WeCanTalk = false
       break
     case 'a':
       keys.a.pressed = true
       isTalking = false
+      WeCanTalk = false
       break
     case 's':
       keys.s.pressed = true
       isTalking = false
+      WeCanTalk = false
       break
     case 'd':
       keys.d.pressed = true
       isTalking = false
+      WeCanTalk = false
       break
     case ' ':
       event.preventDefault()
@@ -35,6 +39,7 @@ window.addEventListener('keydown', (event) => {
     case 'z':
       if(WeCanTalk == true && isTalking == false)
       {
+        WeCanTalk = false
         isTalking = true
         bgMusic.playerTalk()
       }

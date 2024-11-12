@@ -172,6 +172,7 @@ class Player{
     this.bounceFacing = 'mDown'
     this.isHit = false
     this.hitTimer = 0
+    this.elapsedTalkTime = 0
   }
 
   NPCCollision(){
@@ -363,6 +364,14 @@ class Player{
   update(deltaTime, collisionBlocks) {
     if(GameOverState || GameStartState || GameWinState) return
     if (!deltaTime) return
+
+    if(WeCanTalk == true){
+      this.elapsedTalkTime += deltaTime
+      if(this.elapsedTalkTime >= 1){
+        WeCanTalk = false
+        this.elapsedTalkTime = 0
+      }
+    }
 
     if(this.isInvincible){
       this.elapsedInvicibilityTime += deltaTime
