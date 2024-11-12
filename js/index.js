@@ -496,10 +496,10 @@ function animate(backgroundCanvas) {
     NPC.draw(c)
 
     //Talking with NPC's detection point
-    if (player.x + player.width >= NPC.x - 1 &&
-      player.x <= NPC.x + NPC.width + 1 && 
-      player.y + player.height >= NPC.y - 1 && 
-      player.y <= NPC.y + NPC.height + 1
+    if (player.x + player.width >= NPC.x - 2 &&
+      player.x <= NPC.x + NPC.width + 2 && 
+      player.y + player.height >= NPC.y - 2 && 
+      player.y <= NPC.y + NPC.height + 2
       ) {
       WeCanTalk = true
       whichTalkBubble = NPC.TalkBubble

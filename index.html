@@ -9,22 +9,75 @@
 }
 body {
   display: flex;
-  background: black;
+  background: #191A21;
   margin: 0;
   position: relative;
   justify-content: center;
   align-items: center;
   margin: auto;
+  flex-direction: column;
 }
 
 canvas {
+  border: solid 5px white;
+  border-radius: 1rem;
   position: relative;
   display: flex;
   width: 1024px;
   height: 576px;
+  margin-top: 15vh;
 }
+
+.main_div {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  color: white;
+  margin-top: 2vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: center;
+}
+
+.minor_div{
+  text-align: center;
+  flex: 1;
+}
+
+h1{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2vh;
+}
+
+h2{
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2vh;
+}
+
+p{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 </style>
 <canvas style="image-rendering: pixelated"></canvas>
+
+<div class="main_div">
+  <div class="minor_div">
+    <h1 style="margin-bottom:0vh;">Ninja</h1>
+    <h2>an Alien invasion</h2>
+    <p>The aliens have invaded the town. Destroy them all!</p>
+  </div>
+  <div class="minor_div">
+    <h1>Controls:</h1>
+    <p>Walk using WASD</p>
+    <p>Attack using SPACEBAR</p>
+    <p>Talk to villagers using Z</p>
+  </div>
+</div>
+
 
 <script src="./data/l_Terrain.js"></script>
 <script src="./data/l_Front_Renders.js"></script>
