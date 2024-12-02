@@ -103,8 +103,6 @@ class NPC {
     //NPC's Lopen op een pre determined pad, stoppen wanneer je met ze interact
     setPath(deltaTime, isTalking) {
 
-      
-
       if (this.NPCWalk == true) {
         this.elapsedMovementTime += deltaTime
       }
@@ -155,6 +153,11 @@ class NPC {
           this.NPCisWalking = false
           break 
         }
+        
+      if(this.elapsedMovementTime == this.NPCFirstTimer){
+        this.x = this.originalPosition.x
+        this.y = this.originalPosition.y
+      }
       
       if(this.elapsedMovementTime >= this.NPCFirstTimer) {
         this.movementFace = this.FirstDirection

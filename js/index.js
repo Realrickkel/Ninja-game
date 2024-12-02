@@ -490,6 +490,7 @@ function animate(backgroundCanvas) {
   c.drawImage(backgroundCanvas, 0, 0)
   player.draw(c)
 
+  if(GameStartState == false){
   for (let i = NPCs.length - 1; i >= 0; i--){
     const NPC = NPCs[i]
     NPC.update(deltaTime, isTalking)
@@ -514,7 +515,10 @@ function animate(backgroundCanvas) {
       player.NPCCollision()
     }
   }
+}
 
+
+if(GameStartState == false){
   //render out monsters, we willen achteraan beginnen anders krijg je flikkerend beeld
   for (let i = monsters.length - 1; i >= 0; i--){
     const monster = monsters[i]
@@ -565,6 +569,7 @@ function animate(backgroundCanvas) {
     }
   }
   }
+}
 
   c.drawImage(frontRendersCanvas, 0, 0)
   
